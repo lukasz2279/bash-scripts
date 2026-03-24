@@ -11,6 +11,7 @@ packages=(
 		nautilus
 		unzip
 		rofi
+		neofetch
 
 	# hyprland
 		waybar

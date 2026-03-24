@@ -11,12 +11,13 @@ echo -e "System update in progress..."
 echo -e "============================"
 
 if sudo pacman -Syu --noconfirm; then log_message "Pacman updated successfully..."; else log_message "Pacman failed to update..."; exit 1; fi
+
 echo ""
 
-if paru -Syu --noconfirm; then log_message "AUR updated successfully..."; else log_message "AUR faile to update..."; exit 1; fi
+if paru -Syu --noconfirm; then log_message "AUR updated successfully..."; else log_message "AUR failed to update..."; exit 1; fi
+
 echo ""
 
-if paru -Scc; then log_message "Cache cleared successfully..."; else log_message "Failed to clean package cache..."; exit 1; fi
+if paru -Scc; then log_message "AUR cache cleared..."; else log_message "Failed to clear AUR cache..."; exit 1; fi
 						
 if echo ""; then duf /; fi
-
